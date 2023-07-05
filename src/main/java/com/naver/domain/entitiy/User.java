@@ -1,6 +1,7 @@
 package com.naver.domain.entitiy;
 
 public class User {
+
     private Integer id;
     private String name;
     private Integer numOfVisit;
@@ -37,6 +38,7 @@ public class User {
     }
 
     public void setId(Integer id) {
+
         this.id = id;
     }
 
@@ -48,12 +50,14 @@ public class User {
         this.name = name;
     }
 
+
     public Integer getNumOfVisit() {
         return numOfVisit;
     }
 
     public void setNumOfVisit(Integer numOfVisit) {
         this.numOfVisit = numOfVisit;
+
     }
 }
 
