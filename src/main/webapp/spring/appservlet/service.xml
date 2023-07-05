@@ -19,7 +19,7 @@
     <bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg ref="sessionFactoryBean"/>
     </bean>
-    <mybatis:scan base-package="com.naver.user.dao"/>
+    <mybatis:scan base-package="com.naver.dao"/>
 
 </beans>
 

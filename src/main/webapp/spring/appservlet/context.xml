@@ -10,6 +10,9 @@
     <!-- Enable @Controller  -->
     <annotation-driven />
     <context:component-scan base-package="com.naver.controller" />
+    <context:component-scan base-package="com.naver.service" />
+
+
     <beans:bean
             class="org.springframework.web.servlet.view.InternalResourceViewResolver">
         <beans:property name="prefix" value="/WEB-INF/views/" />
