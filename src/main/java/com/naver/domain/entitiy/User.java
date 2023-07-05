@@ -1,23 +1,44 @@
 package com.naver.domain.entitiy;
 
 public class User {
-    private int id;
-    private String name;
-    private int num_of_visit;
-    private String sub_data;
 
-    public User(int id, String name, int num_of_visit, String sub_data) {
+    private Integer id;
+    private String name;
+    private Integer numOfVisit;
+    private String subData;
+    private String imgUrl;
+
+    public User(Integer id, String name, Integer numOfVisit, String subData,String imgUrl) {
         this.id = id;
         this.name = name;
-        this.num_of_visit = num_of_visit;
-        this.sub_data = sub_data;
+        this.numOfVisit = numOfVisit;
+        this.subData = subData;
+        this.imgUrl=imgUrl;
     }
 
-    public int getId() {
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
+    }
+
+    public String getSubData() {
+        return subData;
+    }
+
+    public void setSubData(String subData) {
+        this.subData = subData;
+    }
+
+
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
+
         this.id = id;
     }
 
@@ -29,19 +50,15 @@ public class User {
         this.name = name;
     }
 
-    public int getNum_of_visit() {
-        return num_of_visit;
+
+    public Integer getNumOfVisit() {
+        return numOfVisit;
     }
 
-    public void setNum_of_visit(int num_of_visit) {
-        this.num_of_visit = num_of_visit;
-    }
+    public void setNumOfVisit(Integer numOfVisit) {
+        this.numOfVisit = numOfVisit;
 
-    public String getSub_data() {
-        return sub_data;
-    }
-
-    public void setSub_data(String sub_data) {
-        this.sub_data = sub_data;
     }
 }
+
+

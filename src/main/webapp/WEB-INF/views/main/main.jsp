@@ -1,25 +1,20 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-  <title>Full Motion</title>
+  <title>Back Talking</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-<%--  <link rel="stylesheet" href="css/main.css">--%>
-  <link rel="stylesheet" href="/resources/css/main.css">
-
+  <link rel="stylesheet" href="/resources/css/main.css" />
 </head>
 <body id="top">
-<!-- Banner -->
-<!--
-    To use a video as your background, set data-video to the name of your video without
-    its extension (eg. images/banner). Your video must be available in both .mp4 and .webm
-    formats to work correctly.
--->
-<section id="banner" data-video="/resources/img/banner.jpg">
+
+<section id="banner" data-video="img/banner">
   <div class="inner">
     <header>
       <h1>경쟁자는 가시오</h1>
     </header>
+
   </div>
 </section>
 
@@ -30,137 +25,27 @@
     <!-- Boxes -->
     <div class="thumbnails">
 
-      <div class="box">
-        <a href="#" class="image fit"><img src="/resources/img/pic01.jpg" alt=""/></a>
-        <div class="inner">
-          <h3>Nascetur nunc varius commodo</h3>
-          <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-          <a href="#" class="button fit" onclick="openModal(); return false">Watch</a>
-        </div>
-      </div>
+      <c:forEach items="${users}" var="user" >
 
-      <div  class="modal">
-        <div class="modal-content">
-          <div >
-            <p style="color: black;">이름</p>
-            <p style="color: black;">dasdasdasdasdasd</p>
-            <p style="color: black;">나이</p>
-            <p style="color: black;">30살</p>
-            <p style="color: black;">특징</p>
-            <p style="color: black;">아몰랑</p>
+        <div class="box">
+          <a href="#" class="image fit"><img  src="${user.imgUrl}" /></a>
+          <div class="inner">
+            <h3>${user.name}</h3>
+            <p>${user.subData}</p>
+            <p>${user.numOfVisit}</p>
+            <form action="/user" method="get">
+              <input type="hidden" value="${user.id}" >
+              <input class="button fit"  type="submit" value="Watch">
+            </form>
+            <form action="/main" method="post">
+              <input type="hidden" name="userId" value="${user.id}" >
+              <input style="color: #1b1b1f;cursor:default; z-index: 1; margin-bottom: 10px" type="text" name="imgUrl" placeholder="이미지 주소 넣어주세요" >
+              <input class="button fit"  type="submit" value="사진 수정">
+            </form>
+
           </div>
         </div>
-      </div>
-
-      <div class="box">
-        <a href="#" class="image fit"><img src="/resources/img/pic02.jpg" alt="" /></a>
-        <div class="inner">
-          <h3>Nascetur nunc varius commodo</h3>
-          <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-          <a href="#" class="button style2 fit" onclick="openModal(); return false">Watch</a>
-        </div>
-      </div>
-
-      <div  class="modal">
-        <div class="modal-content">
-          <div>
-            <p style="color: black;">이름</p>
-            <p style="color: black;">dasdasdasdasdasd</p>
-            <p style="color: black;">나이</p>
-            <p style="color: black;">30살</p>
-            <p style="color: black;">특징</p>
-            <p style="color: black;">아몰랑</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="box">
-        <a href="#" class="image fit"><img src="/resources/img/pic03.jpg" alt="" /></a>
-        <div class="inner">
-          <h3>Nascetur nunc varius commodo</h3>
-          <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-          <a href="#" class="button style3 fit" onclick="openModal(); return false">Watch</a>
-        </div>
-      </div>
-
-      <div  class="modal">
-        <div class="modal-content">
-          <div >
-            <p style="color: black;">이름</p>
-            <p style="color: black;">dasdasdasdasdasd</p>
-            <p style="color: black;">나이</p>
-            <p style="color: black;">30살</p>
-            <p style="color: black;">특징</p>
-            <p style="color: black;">아몰랑</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="box">
-        <a href="#" class="image fit"><img src="/resources/img/pic04.jpg" alt="" /></a>
-        <div class="inner">
-          <h3>Nascetur nunc varius commodo</h3>
-          <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-          <a href="#" class="button style2 fit" onclick="openModal(); return false">Watch</a>
-        </div>
-      </div>
-
-      <div  class="modal">
-        <div class="modal-content">
-          <div >
-            <p style="color: black;">이름</p>
-            <p style="color: black;">dasdasdasdasdasd</p>
-            <p style="color: black;">나이</p>
-            <p style="color: black;">30살</p>
-            <p style="color: black;">특징</p>
-            <p style="color: black;">아몰랑</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="box">
-        <a href="#" class="image fit"><img src="/resources/img/pic05.jpg" alt="" /></a>
-        <div class="inner">
-          <h3>Nascetur nunc varius commodo</h3>
-          <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-          <a href="#" class="button style3 fit" onclick="openModal(); return false">Watch</a>
-        </div>
-      </div>
-
-      <div  class="modal">
-        <div class="modal-content">
-          <div >
-            <p style="color: black;">이름</p>
-            <p style="color: black;">dasdasdasdasdasd</p>
-            <p style="color: black;">나이</p>
-            <p style="color: black;">30살</p>
-            <p style="color: black;">특징</p>
-            <p style="color: black;">아몰랑</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="box">
-        <a href="#" class="image fit"><img src="/resources/img/pic06.jpg" alt="" /></a>
-        <div class="inner">
-          <h3>Nascetur nunc varius commodo</h3>
-          <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-          <a href="#" class="button style2 fit" onclick="openModal(); return false">Watch</a>
-        </div>
-      </div>
-
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <div id="modal-text">
-            <p style="color: black;">이름</p>
-            <p style="color: black;">dasdasdasdasdasd</p>
-            <p style="color: black;">나이</p>
-            <p style="color: black;">30살</p>
-            <p style="color: black;">특징</p>
-            <p style="color: black;">아몰랑</p>
-          </div>
-        </div>
-      </div>
+      </c:forEach>
 
     </div>
 
@@ -170,7 +55,7 @@
 <!-- Footer -->
 <footer id="footer">
   <div class="inner">
-    <h2>Etiam veroeros lorem</h2>
+    <h2>footer</h2>
     <p>Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui mi, ac imperdiet dolor tincidunt nec. Ut erat lectus, dictum sit amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit, consectetur risus viverra, iaculis orci. Phasellus eu nibh ut mi luctus auctor. Donec sit amet dolor in diam feugiat venenatis. </p>
   </div>
 </footer>
