@@ -1,4 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
   <title>Back Talking</title>
@@ -24,142 +25,27 @@
     <!-- Boxes -->
     <div class="thumbnails">
 
-      <div class="box">
-        <a href="#" class="image fit"><img src="/resources/img/pic01.jpg" alt="" /></a>
-        <div class="inner">
-          <h3>Nascetur nunc varius commodo</h3>
-          <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-          <a href="#" class="button fit" onclick="openModal(); return false">Watch</a>
-        </div>
-      </div>
+      <c:forEach items="${users}" var="user" >
 
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <div class="modal-text">
-            <p>이름</p>
-            <p>dasdasdasdasdasd</p>
-            <p>나이</p>
-            <p>30살</p>
-            <p>특징</p>
-            <p>아몰랑</p>
-            <form action="" method="post" class="input_box">
-              <input type="text" placeholder="냠냠">
-              <input type="text" placeholder="냠냠">
-              <input type="submit" value="button">
+        <div class="box">
+          <a href="#" class="image fit"><img  src="${user.imgUrl}" /></a>
+          <div class="inner">
+            <h3>${user.name}</h3>
+            <p>${user.subData}</p>
+            <p>${user.numOfVisit}</p>
+            <form action="/user" method="get">
+              <input type="hidden" value="${user.id}" >
+              <input class="button fit"  type="submit" value="Watch">
             </form>
+            <form action="/main" method="post">
+              <input type="hidden" name="userId" value="${user.id}" >
+              <input style="color: #1b1b1f;cursor:default; z-index: 1; margin-bottom: 10px" type="text" name="imgUrl" placeholder="이미지 주소 넣어주세요" >
+              <input class="button fit"  type="submit" value="사진 수정">
+            </form>
+
           </div>
         </div>
-      </div>
-
-      <div class="box">
-        <a href="#" class="image fit"><img src="/resources/img/pic01.jpg" alt="" /></a>
-        <div class="inner">
-          <h3>Nascetur nunc varius commodo</h3>
-          <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-          <a href="#" class="button fit" onclick="openModal(); return false">Watch</a>
-        </div>
-      </div>
-
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <div class="modal-text">
-            <p>이름</p>
-            <p>dasdasdasdasdasd</p>
-            <p>나이</p>
-            <p>30살</p>
-            <p>특징</p>
-            <p>아몰랑</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="box">
-        <a href="#" class="image fit"><img src="/resources/img/pic01.jpg" alt="" /></a>
-        <div class="inner">
-          <h3>Nascetur nunc varius commodo</h3>
-          <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-          <a href="#" class="button fit" onclick="openModal(); return false">Watch</a>
-        </div>
-      </div>
-
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <div class="modal-text">
-            <p>이름</p>
-            <p>dasdasdasdasdasd</p>
-            <p>나이</p>
-            <p>30살</p>
-            <p>특징</p>
-            <p>아몰랑</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="box">
-        <a href="#" class="image fit"><img src="/resources/img/pic01.jpg" alt="" /></a>
-        <div class="inner">
-          <h3>Nascetur nunc varius commodo</h3>
-          <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-          <a href="#" class="button fit" onclick="openModal(); return false">Watch</a>
-        </div>
-      </div>
-
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <div class="modal-text">
-            <p>이름</p>
-            <p>dasdasdasdasdasd</p>
-            <p>나이</p>
-            <p>30살</p>
-            <p>특징</p>
-            <p>아몰랑</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="box">
-        <a href="#" class="image fit"><img src="/resources/img/pic01.jpg" alt="" /></a>
-        <div class="inner">
-          <h3>Nascetur nunc varius commodo</h3>
-          <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-          <a href="#" class="button fit" onclick="openModal(); return false">Watch</a>
-        </div>
-      </div>
-
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <div class="modal-text">
-            <p>이름</p>
-            <p>dasdasdasdasdasd</p>
-            <p>나이</p>
-            <p>30살</p>
-            <p>특징</p>
-            <p>아몰랑</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="box">
-        <a href="#" class="image fit"><img src="/resources/img/pic01.jpg" alt="" /></a>
-        <div class="inner">
-          <h3>Nascetur nunc varius commodo</h3>
-          <p>Interdum amet accumsan placerat commodo ut amet aliquam blandit nunc tempor lobortis nunc non. Mi accumsan.</p>
-          <a href="#" class="button fit" onclick="openModal(); return false">Watch</a>
-        </div>
-      </div>
-
-      <div id="modal" class="modal">
-        <div class="modal-content">
-          <div class="modal-text">
-            <p>이름</p>
-            <p>dasdasdasdasdasd</p>
-            <p>나이</p>
-            <p>30살</p>
-            <p>특징</p>
-            <p>아몰랑</p>
-          </div>
-        </div>
-      </div>
+      </c:forEach>
 
     </div>
 

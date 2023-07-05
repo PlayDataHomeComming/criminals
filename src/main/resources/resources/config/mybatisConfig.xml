@@ -4,6 +4,8 @@
         "https://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-
+        <typeAlias type="com.naver.domain.entitiy.User" alias="User"/>
+        <typeAlias type="com.naver.domain.entitiy.Comments" alias="Comments"/>
+        <typeAlias type="com.naver.domain.entitiy.Contents" alias="Contents"/>
     </typeAliases>
 </configuration>
