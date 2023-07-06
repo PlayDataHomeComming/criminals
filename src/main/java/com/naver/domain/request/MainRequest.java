@@ -4,9 +4,14 @@ public class MainRequest {
     private String imgUrl;
     private String userId;
 
-    public MainRequest(String imgUrl, String userId) {
+    private Integer numOfVisit;
+
+    public String getImgUrl() {
+        return imgUrl;
+    }
+
+    public void setImgUrl(String imgUrl) {
         this.imgUrl = imgUrl;
-        this.userId = userId;
     }
 
     public String getUserId() {
@@ -17,11 +22,18 @@ public class MainRequest {
         this.userId = userId;
     }
 
-    public String getImgUrl() {
-        return imgUrl;
+    public Integer getNumOfVisit() {
+        return numOfVisit;
     }
 
-    public void setImgUrl(String imgUrl) {
+    public void setNumOfVisit(Integer numOfVisit) {
+        this.numOfVisit = numOfVisit;
+    }
+
+    public MainRequest(String imgUrl, String userId, Integer numOfVisit) {
         this.imgUrl = imgUrl;
+        this.userId = userId;
+        this.numOfVisit = numOfVisit;
+
     }
 }

@@ -2,6 +2,7 @@ package com.naver.service;
 
 import com.naver.dao.CommentsMapper;
 import com.naver.dao.ContentsMapper;
+import com.naver.dao.UserMapper;
 import com.naver.domain.entitiy.Comments;
 import com.naver.domain.entitiy.Contents;
 import com.naver.domain.entitiy.User;
@@ -18,6 +19,8 @@ public class UserService {
     private CommentsMapper commentsMapper;
     @Autowired
     private ContentsMapper contentsMapper;
+    @Autowired
+    private UserMapper userMapper;
 
 
     public Integer insertComment(ChangeUserCommentRequest request)
@@ -40,7 +43,9 @@ public class UserService {
     public void insertAttribute(AddAttributeReqeust addAttributeReqeust){
         contentsMapper.insertAttribute(addAttributeReqeust);
     };
-
+    public Integer numOfVisit(int id) {
+        return userMapper.numOfVisit(id);
+    }
 
 
 

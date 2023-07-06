@@ -23,5 +23,7 @@ public interface UserMapper {
 
     public List<User> getUser();
     public void updateImgUrl(MainRequest mainRequest);
+    public Integer numOfVisit(int id);
+
 
 }

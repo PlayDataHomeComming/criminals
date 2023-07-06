@@ -3,6 +3,7 @@ package com.naver.controller;
 import com.naver.domain.entitiy.User;
 import com.naver.domain.request.AddAttributeReqeust;
 import com.naver.domain.request.ChangeUserCommentRequest;
+import com.naver.service.MainService;
 import com.naver.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,6 +27,10 @@ public class UserPageController {
         mav.addObject("contents",userService.getUserContents(userId));
         mav.addObject("userId",userId);
         mav.setViewName("/user/user");
+        int id= Integer.parseInt(userId);
+        userService.numOfVisit(id);
+        Integer numOfVisit = Integer.parseInt(userId);
+        mav.addObject("userId", userId);
         return mav;
     }
 

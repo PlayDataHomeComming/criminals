@@ -14,5 +14,9 @@
         where id=#{userId}
     </update>
 
-
+    <update id="numOfVisit" >
+        update user
+        set num_of_visit = num_of_visit+1
+        where id = #{userId}
+    </update>
 </mapper>

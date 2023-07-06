@@ -21,4 +21,5 @@ public class MainService {
     public void updateImgUrl(MainRequest mainRequest){
         userMapper.updateImgUrl(mainRequest);
     }
+
 }
