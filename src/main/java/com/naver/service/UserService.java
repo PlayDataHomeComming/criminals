@@ -7,6 +7,7 @@ import com.naver.domain.entitiy.Contents;
 import com.naver.domain.entitiy.User;
 import com.naver.domain.request.AddAttributeReqeust;
 import com.naver.domain.request.ChangeUserCommentRequest;
+import com.naver.domain.request.InsertContent;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -20,9 +21,9 @@ public class UserService {
     private ContentsMapper contentsMapper;
 
 
-    public Integer insertComment(ChangeUserCommentRequest request)
+    public void insertComment(InsertContent insertContent)
     {
-        return commentsMapper.insertComment(request);
+        contentsMapper.insertContent(insertContent);
     }
     public Integer deleteComment(ChangeUserCommentRequest request)
     {
@@ -41,6 +42,9 @@ public class UserService {
         contentsMapper.insertAttribute(addAttributeReqeust);
     };
 
+    public List<Comments> getComments(String userId){
+        return commentsMapper.getComments(userId);
+    };
 
 
 

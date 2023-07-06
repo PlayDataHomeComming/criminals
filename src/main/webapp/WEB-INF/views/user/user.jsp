@@ -25,8 +25,23 @@
         <input type="submit" 추가>
     </form>
 </div>
+
+<table>
+    <tr>
+        <td>닉네임</td>
+        <td>내용</td>
+    </tr>
+    <c:forEach items="${comments}" var="comment">
+        <tr>
+            <td>${comment.nickName}</td>
+            <td>${comment.content}</td>
+        </tr>
+    </c:forEach>
+</table>
+
+
 <div>
-    <form action="/user/insertComment" method="post">
+    <form action="/user/insertContent" method="post">
         <p>댓글을 까먹지 말아주세요(수정시 닉네임 패스워드 필요)</p>
         <input type="hidden" name="userId" value="${userId}">
         <input type="text" name="nickName" placeholder="닉네임">
