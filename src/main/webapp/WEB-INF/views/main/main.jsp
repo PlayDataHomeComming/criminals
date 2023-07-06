@@ -34,7 +34,7 @@
             <p>${user.subData}</p>
             <p>${user.numOfVisit}</p>
             <form action="/user" method="get">
-              <input type="hidden" value="${user.id}" >
+              <input type="hidden" name="userId" value="${user.id}" >
               <input class="button fit"  type="submit" value="Watch">
             </form>
             <form action="/main" method="post">

@@ -1,10 +1,4 @@
-<%@ page import="com.naver.domain.entitiy.User" %><%--
-  Created by IntelliJ IDEA.
-  User: playdata
-  Date: 2023-07-05
-  Time: 오후 12:04
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -13,52 +7,27 @@
 <body>
 <table>
     <tr>
-        <td>번호</td>
-        <td>이름</td>
-        <td>추가데이터</td>
-        <td>조회수</td>
+        <td>특징</td>
+        <td>내용</td>
     </tr>
-    <% User user = (User)session.getAttribute("user");%>
-    <tr>
-        <td><%= user.getId()%></td>
-        <td><%= user.getName()%></td>
-        <td><%= user.getSub_data()%></td>
-        <td><%= user.getNum_of_visit()%></td>
-    </tr>
-<%--    <%--%>
-<%--        List<TodoJoinUser> todos_check = (List<TodoJoinUser>)request.getAttribute("checklist");--%>
-<%--        if(todos_check!= null &&todos_check.size() != 0){--%>
-<%--            for (TodoJoinUser todo :todos_check) {%>--%>
-<%--    <tr>--%>
-<%--        <%--%>
-<%--            if ((int)session.getAttribute("uid") == user.getId()) {--%>
-<%--        %><td>--%>
-<%--        <a href="/main?keyword=<%= todo.getId() %>">수정</a>--%>
-<%--    </td> <%--%>
-<%--        }--%>
-<%--    %>--%>
-<%--        <%--%>
-<%--            if (session.getAttribute("uid") == todo.getUid()) {--%>
-<%--        %><td>--%>
-<%--        <a href="/main?keyword=<%= todo.getId() %>">삭제x</a>--%>
-<%--    </td> <%--%>
-<%--        }--%>
-<%--    %>--%>
-<%--    </tr>--%>
-<%--    <%--%>
-<%--            }--%>
-<%--        }--%>
-<%--    %>--%>
-</table>
+    <c:forEach items="${contents}" var="content">
+        <tr>
+            <td>${content.attribute}</td>
+            <td>${content.value}</td>
+        </tr>
+    </c:forEach>
+    </table>
 <div>
-    <form action="/user/user" method="post">
-        <input type="text" name="content" placeholder="댓글 추가하기">
-        <input type="추가">
+    <form action="/user/addAttribute" method="post">
+        <input type="hidden" name="userId" value="${userId}">
+        <input type="text" name="attribute" placeholder="특징">
+        <input type="text" name="value" placeholder="내용">
+        <input type="submit" 추가>
     </form>
 </div>
 <div>
     <form action="/user/user" method="post">
-        <input type="text" name="content" placeholder="content을 입력해주세요">
+        <input type="text" name="content" placeholder="댓글을 입력해주세요">
         <input type="submit">
     </form>
 </div>

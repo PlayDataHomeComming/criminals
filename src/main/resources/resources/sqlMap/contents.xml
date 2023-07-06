@@ -3,7 +3,14 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.naver.dao.ContentsMapper">
+    <select id="getUserContents" resultType="Contents">
+        select * from contents
+        where user_id=${userId}
+    </select>
 
-
+    <insert id="insertAttribute">
+        insert into contents(user_id,attribute,value)
+        values(${userId},"${attribute}","${value}")
+    </insert>
 
 </mapper>

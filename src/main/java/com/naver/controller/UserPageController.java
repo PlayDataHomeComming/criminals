@@ -1,6 +1,7 @@
 package com.naver.controller;
 
 import com.naver.domain.entitiy.User;
+import com.naver.domain.request.AddAttributeReqeust;
 import com.naver.domain.request.ChangeUserCommentRequest;
 import com.naver.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,26 +17,24 @@ import javax.servlet.http.HttpSession;
 public class UserPageController {
     @Autowired
     private UserService userService;
+
     @GetMapping("/user")
-    public ModelAndView getUser(ModelAndView mav,HttpSession session)
+    public ModelAndView getUser(
+            ModelAndView mav,
+            @ModelAttribute(value = "userId") String userId)
     {
-
-        User user = userService.getUser(1);
-        session.setAttribute("user",user);
-
-        //여기서 눌린 사람의 데이터를 session또는 model attribute로 받아온다.
-        // 그래서 그 값을 테이블 형식으로 보여준다.
-        //그래서 jsp에 contents를 session.setattribute로 설정한 값으로 테이블 출력
+        mav.addObject("contents",userService.getUserContents(userId));
+        mav.addObject("userId",userId);
         mav.setViewName("/user/user");
         return mav;
     }
 
-    @PostMapping("/user")
+    @PostMapping("/user/addAttribute")
     public ModelAndView postUser(ModelAndView mav
-    , @ModelAttribute ChangeUserCommentRequest request)
+    , @ModelAttribute AddAttributeReqeust addAttributeReqeust)
     {
-
-        mav.setViewName("redirect:/user/user");
+        mav.setViewName("redirect:/user?userId="+addAttributeReqeust.getUserId());
+        userService.insertAttribute(addAttributeReqeust);
         return mav;
     }
 
