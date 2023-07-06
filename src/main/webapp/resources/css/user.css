@@ -1,0 +1,109 @@
+/* 스타일 예시 */
+
+/* 헤더 스타일 */
+h1 {
+    color: blue;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* 테이블 스타일 */
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+}
+
+table th,
+table td {
+    padding: 10px;
+    text-align: center;
+}
+
+table th {
+    background-color: #f2f2f2;
+    color: #333;
+    font-weight: bold;
+}
+
+table td {
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+table tr:hover td {
+    background-color: #eaeaea;
+}
+
+table caption {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 배경 스타일 */
+body {
+    background-color: #f2f2f2;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* 폼 스타일 */
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="hidden"] {
+    margin: 5px;
+    padding: 5px;
+}
+
+p {
+    font-style: italic;
+}
+/* 스타일 예시 */
+
+/* 헤더 스타일 */
+h1 {
+    color: blue;
+    font-size: 24px;
+    text-align: center;
+}
+
+/* 테이블 스타일 */
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+/* 폼 스타일 */
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="submit"],
+input[type="hidden"] {
+    margin: 5px;
+    padding: 5px;
+}
+
+p {
+    font-style: italic;
+}

@@ -20,7 +20,7 @@ public interface UserMapper {
     public Integer deleteComment(ChangeUserCommentRequest request);
 
 
-
+    public Integer numOfVisit(int id);
     public List<User> getUser();
     public void updateImgUrl(MainRequest mainRequest);
 

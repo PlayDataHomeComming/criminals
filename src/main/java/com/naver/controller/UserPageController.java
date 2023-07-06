@@ -23,6 +23,7 @@ public class UserPageController {
         mav.addObject("contents",userService.getUserContents(userId));
         mav.addObject("comments",userService.getComments(userId));
         mav.addObject("userId",userId);
+        userService.numOfVisit(Integer.parseInt(userId));
         mav.setViewName("/user/user");
         return mav;
     }
