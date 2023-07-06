@@ -6,9 +6,7 @@ import com.naver.dao.UserMapper;
 import com.naver.domain.entitiy.Comments;
 import com.naver.domain.entitiy.Contents;
 import com.naver.domain.entitiy.User;
-import com.naver.domain.request.AddAttributeReqeust;
-import com.naver.domain.request.ChangeUserCommentRequest;
-import com.naver.domain.request.InsertCommentRequest;
+import com.naver.domain.request.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -51,6 +49,14 @@ public class UserService {
     };
     public Integer numOfVisit(int id) {
         return userMapper.numOfVisit(id);
+    }
+
+    public void updateComment(UpdateCommentRequest updateCommentRequest){
+        commentsMapper.updateComment(updateCommentRequest);
+    }
+
+    public void deleteAttribute(DeleteAttributeRequest deleteAttributeRequest){
+        contentsMapper.deleteAttribute(deleteAttributeRequest);
     }
 
 }

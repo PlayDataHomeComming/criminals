@@ -1,7 +1,9 @@
 package com.naver.controller;
 
 import com.naver.domain.request.AddAttributeReqeust;
+import com.naver.domain.request.DeleteAttributeRequest;
 import com.naver.domain.request.InsertCommentRequest;
+import com.naver.domain.request.UpdateCommentRequest;
 import com.naver.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -41,10 +43,26 @@ public class UserPageController {
     public ModelAndView postUserInsertComment(ModelAndView mav
             , @ModelAttribute InsertCommentRequest insertCommentRequest)
     {
-        System.out.println(insertCommentRequest.getComment());
         mav.setViewName("redirect:/user?userId="+ insertCommentRequest.getUserId());
         userService.insertComment(insertCommentRequest);
         return mav;
     }
 
+    @PostMapping("/user/updateComment")
+    public ModelAndView postUserUpdateComment(ModelAndView mav
+            , @ModelAttribute UpdateCommentRequest updateCommentRequest)
+    {
+        mav.setViewName("redirect:/user?userId="+ updateCommentRequest.getUserId());
+        userService.updateComment(updateCommentRequest);
+        return mav;
+    }
+
+    @PostMapping("/user/deleteAttribute")
+    public ModelAndView postUserUpdateComment(ModelAndView mav
+            , @ModelAttribute DeleteAttributeRequest deleteAttributeRequest)
+    {
+        mav.setViewName("redirect:/user?userId="+ deleteAttributeRequest.getUserId());
+        userService.deleteAttribute(deleteAttributeRequest);
+        return mav;
+    }
 }

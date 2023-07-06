@@ -19,6 +19,10 @@
         where user_id= #{user_id} and attribute = #{attribute} and value= #{value}
     </delete>
 
-
+    <update id="updateComment">
+        update comments
+        set content=#{comment}
+        where id=#{commentId} and password=#{passWord} and user_id=#{userId}
+    </update>
 
 </mapper>

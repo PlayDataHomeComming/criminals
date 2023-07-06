@@ -32,14 +32,14 @@
           <div class="inner">
             <h3>${user.name}</h3>
             <p>${user.subData}</p>
-            <p>${user.numOfVisit}</p>
+            <p>방문자 수:  <strong>${user.numOfVisit}</strong></p>
             <form action="/user" method="get">
               <input type="hidden" name="userId" value="${user.id}" >
               <input class="button fit"  type="submit" value="Watch">
             </form>
             <form action="/main" method="post">
               <input type="hidden" name="userId" value="${user.id}" >
-              <input style="color: #1b1b1f;cursor:default; z-index: 1; margin-bottom: 10px" type="text" name="imgUrl" placeholder="이미지 주소 넣어주세요" >
+              <input style="color: #1b1b1f;cursor:default; z-index: 1; margin-bottom: 10px" type="text" name="imgUrl" placeholder="이미지 주소 넣어주세요"  >
               <input class="button fit"  type="submit" value="사진 수정">
             </form>
 
@@ -59,30 +59,6 @@
     <p>Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui mi, ac imperdiet dolor tincidunt nec. Ut erat lectus, dictum sit amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit, consectetur risus viverra, iaculis orci. Phasellus eu nibh ut mi luctus auctor. Donec sit amet dolor in diam feugiat venenatis. </p>
   </div>
 </footer>
-
-<script>
-  function openModal() {
-    var modal = document.getElementById('modal');
-    modal.style.display = 'block';
-  }
-
-  function closeModal() {
-    var modal = document.getElementById('modal');
-    modal.style.display = 'none';
-  }
-  window.onclick = function(event) {
-    var modal = document.getElementById('modal');
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-  window.addEventListener("click", function(event) {
-    var modal = document.querySelector(".modal-content");
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
-</script>
 
 </body>
 </html>
