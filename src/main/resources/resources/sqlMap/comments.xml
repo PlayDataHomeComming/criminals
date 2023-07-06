@@ -18,7 +18,17 @@
         DELETE FROM contents
         where user_id= #{user_id} and attribute = #{attribute} and value= #{value}
     </delete>
+    <update id="updateComment">
+        update comments
+        set content=#{content}
+        where id=#{commentId} and password=#{password}
 
+    </update>
 
+    <update id="updateImgUrl">
+        update user
+        set image_url=#{imgUrl}
+        where id=#{userId}
+    </update>
 
 </mapper>
