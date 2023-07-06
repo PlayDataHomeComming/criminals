@@ -21,4 +21,9 @@ public class MainService {
     public void updateImgUrl(MainRequest mainRequest){
         userMapper.updateImgUrl(mainRequest);
     }
+    public Integer addUser(User user)
+    {
+        return userMapper.addUser(user);
+    }
+
 }

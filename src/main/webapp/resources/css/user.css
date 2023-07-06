@@ -61,6 +61,7 @@ table td {
     background-color: #0b8163;
     height: 63px;
     text-align: right;
+    vertical-align: middle;
 
 
 }
@@ -99,4 +100,10 @@ table td {
     color:#0b8163 ;
     font-weight: 600;
     background-color: #dffad3;
+}
+.contents_box{
+    color: #1b1b1f;
+}
+.key_size{
+    width: 8%;
 }

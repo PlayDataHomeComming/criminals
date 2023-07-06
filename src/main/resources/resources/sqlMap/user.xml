@@ -19,6 +19,10 @@
         set num_of_visit = num_of_visit+1
         where id = #{userId}
     </update>
+    <insert id="addUser">
+        insert into user(name,num_of_visit,sub_data,image_url)
+        values(#{name},#{numOfVisit},#{subData},#{imgUrl})
+    </insert>
 
 
 

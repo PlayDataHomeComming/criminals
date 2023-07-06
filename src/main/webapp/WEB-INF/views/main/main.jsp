@@ -13,6 +13,9 @@
   <div class="inner">
     <header>
       <h1>경쟁자는 가시오</h1>
+      <form class="form_box" action="/main/add" method="get">
+        <input class="button" value="유저추가하기" type="submit">
+      </form>
     </header>
 
   </div>
@@ -51,7 +54,6 @@
 
   </div>
 </div>
-
 <!-- Footer -->
 <footer id="footer">
   <div class="inner">
@@ -60,29 +62,7 @@
   </div>
 </footer>
 
-<script>
-  function openModal() {
-    var modal = document.getElementById('modal');
-    modal.style.display = 'block';
-  }
 
-  function closeModal() {
-    var modal = document.getElementById('modal');
-    modal.style.display = 'none';
-  }
-  window.onclick = function(event) {
-    var modal = document.getElementById('modal');
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
-  window.addEventListener("click", function(event) {
-    var modal = document.querySelector(".modal-content");
-    if (event.target === modal) {
-      closeModal();
-    }
-  });
-</script>
 
 </body>
 </html>
