@@ -30,7 +30,7 @@ public class UserPageController {
     }
 
     @PostMapping("/user/addAttribute")
-    public ModelAndView postUser(ModelAndView mav
+    public ModelAndView postUserAddAttribute(ModelAndView mav
     , @ModelAttribute AddAttributeReqeust addAttributeReqeust)
     {
         mav.setViewName("redirect:/user?userId="+addAttributeReqeust.getUserId());
@@ -38,6 +38,13 @@ public class UserPageController {
         return mav;
     }
 
-
+    @PostMapping("/user/insertComment")
+    public ModelAndView postUserInsertComment(ModelAndView mav
+            , @ModelAttribute AddAttributeReqeust addAttributeReqeust)
+    {
+        mav.setViewName("redirect:/user?userId="+addAttributeReqeust.getUserId());
+        userService.insertAttribute(addAttributeReqeust);
+        return mav;
+    }
 
 }
