@@ -1,7 +1,7 @@
 package com.naver.controller;
 
 import com.naver.domain.request.AddAttributeReqeust;
-import com.naver.domain.request.InsertContent;
+import com.naver.domain.request.InsertCommentRequest;
 import com.naver.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,10 +38,11 @@ public class UserPageController {
 
     @PostMapping("/user/insertComment")
     public ModelAndView postUserInsertComment(ModelAndView mav
-            , @ModelAttribute InsertContent insertContent)
+            , @ModelAttribute InsertCommentRequest insertCommentRequest)
     {
-        mav.setViewName("redirect:/user?userId="+ insertContent.getUserId());
-        userService.insertComment(insertContent);
+        System.out.println(insertCommentRequest.getComment());
+        mav.setViewName("redirect:/user?userId="+ insertCommentRequest.getUserId());
+        userService.insertComment(insertCommentRequest);
         return mav;
     }
 

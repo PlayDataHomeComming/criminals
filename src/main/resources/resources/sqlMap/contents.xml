@@ -13,9 +13,6 @@
         values(${userId},"${attribute}","${value}")
     </insert>
 
-    <insert id = "insertContent">
-        insert into contents (user_id,nick_name, content, password)
-        values (#{userId},"#{nickName}","#{comment}","#{passWord}");
-    </insert>
+
 
 </mapper>

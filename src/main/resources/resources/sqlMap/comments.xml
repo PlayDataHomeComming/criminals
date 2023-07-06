@@ -9,6 +9,10 @@
         where user_id=#{userId}
     </select>
 
+    <insert id = "insertComment">
+        insert into comments (user_id,nick_name, content, password)
+        values (#{userId},#{nickName},#{comment},#{passWord});
+    </insert>
 
     <delete id="deleteComment">
         DELETE FROM contents

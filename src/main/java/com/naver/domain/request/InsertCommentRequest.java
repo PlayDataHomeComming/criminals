@@ -1,12 +1,12 @@
 package com.naver.domain.request;
 
-public class InsertContent {
+public class InsertCommentRequest {
     private String userId;
     private String nickName;
     private String passWord;
     private String comment;
 
-    public InsertContent(String userId, String nickName, String passWord, String comment) {
+    public InsertCommentRequest(String userId, String nickName, String passWord, String comment) {
         this.userId = userId;
         this.nickName = nickName;
         this.passWord = passWord;

@@ -31,6 +31,7 @@
         <td>닉네임</td>
         <td>내용</td>
     </tr>
+    <h1>댓글</h1>
     <c:forEach items="${comments}" var="comment">
         <tr>
             <td>${comment.nickName}</td>
@@ -41,7 +42,7 @@
 
 
 <div>
-    <form action="/user/insertContent" method="post">
+    <form action="/user/insertComment" method="post">
         <p>댓글을 까먹지 말아주세요(수정시 닉네임 패스워드 필요)</p>
         <input type="hidden" name="userId" value="${userId}">
         <input type="text" name="nickName" placeholder="닉네임">
