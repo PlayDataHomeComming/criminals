@@ -106,8 +106,7 @@ hr{
     color: #666;
 }
 .form_box{
-    text-align: right;
-    margin-top: 15px;
+    margin :15px auto;
 
 }
 /*style="text-align: left; font-size:12px; color:#666*/

@@ -13,9 +13,7 @@
   <div class="inner">
     <header>
       <h1>경쟁자는 가시오</h1>
-      <form class="form_box" action="/main/add" method="get">
-        <input class="button" value="유저추가하기" type="submit">
-      </form>
+
     </header>
 
   </div>
@@ -52,6 +50,9 @@
 
     </div>
 
+    <form class="form_box" action="/main/add" method="get">
+      <input class="button input_location" value="유저추가하기" type="submit">
+    </form>
   </div>
 </div>
 <!-- Footer -->
