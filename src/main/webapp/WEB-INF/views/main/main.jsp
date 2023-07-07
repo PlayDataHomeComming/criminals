@@ -12,8 +12,6 @@
 <section id="banner" data-video="img/banner">
   <div class="inner">
     <header>
-      <h1>경쟁자는 가시오</h1>
-
     </header>
 
   </div>
