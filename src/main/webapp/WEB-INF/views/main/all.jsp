@@ -10,6 +10,7 @@
 <html>
 <head>
     <title>all</title>
+    <link rel="stylesheet" href="/resources/css/all.css" />
 </head>
 
 </html>
@@ -25,21 +26,14 @@
     <div id="board-search">
         <div class="container">
             <div class="search-window">
-                <form action="">
-                    <div class="search-wrap">
-                        <label for="search" class="blind">내용 추가</label>
-                        <input id="search" type="search" name="" placeholder="검색어를 입력해주세요." value="">
-                        <button type="submit" class="btn btn-dark">추가</button>
-                    </div>
+                <form method="post" action=/main/all>
+                    <input type="text" name="content" placeholder="내용을 입력하세요">
+                    <input type="text" name="name" placeholder="작성자명을 입력하세요">
+                    <input type="submit" value="작성하기">
                 </form>
             </div>
         </div>
     </div>
-    <form method="post" action=/main/all>
-        <input type="text" name="content" placeholder="내용을 입력하세요">
-        <input type="text" name="name" placeholder="작성자명을 입력하세요">
-        <input type="submit" value="작성하기">
-    </form>
     <c:forEach items="${freecomments}" var="content">
         <div id="board-list">
             <div class="container">
@@ -54,24 +48,14 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>1</td>
-                        <th><a href="#!">공지사항 안내입니다. 이용해주셔서 감사합니다</a></th>
-                        <td>2017.06.15</td>
+                        <td>${content.id}</td>
+                        <th><p>${content.content}</p></th>
+                        <td>${content.name}</td>
+                        <td>${content.createTime}</td>
                     </tr>
                     </tbody>
                 </table>
             </div>
         </div>
-        <p>${content.id}</p>
-        <p>${content.name}</p>
-        <p>${content.content}</p>
-        <p>${content.createTime}</p>
-
     </c:forEach>
-
-
-
-
-    <!-- board list area -->
-
 </section>
