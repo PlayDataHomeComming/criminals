@@ -23,6 +23,7 @@
         update user
         set image_url=#{imgUrl}
         where id=#{userId}
+    </update>
 
     <update id="updateComment">
         update comments

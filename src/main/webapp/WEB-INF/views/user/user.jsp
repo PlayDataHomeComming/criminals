@@ -24,11 +24,7 @@
             <td class="key">${content.attribute}</td>
             <td class="content_text">${content.value}</td>
         </tr>
-        <tr>
-            <td class="key">${content.attribute}</td>
-            <td>${content.value}</td>
 
-        </tr>
 
 
     </c:forEach>
