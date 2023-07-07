@@ -8,6 +8,7 @@
         <typeAlias type="com.naver.domain.entitiy.User" alias="User"/>
         <typeAlias type="com.naver.domain.entitiy.Comments" alias="Comments"/>
         <typeAlias type="com.naver.domain.entitiy.Contents" alias="Contents"/>
+        <typeAlias type="com.naver.domain.request.FreeComment" alias="FreeComment"/>
 
     </typeAliases>
 </configuration>

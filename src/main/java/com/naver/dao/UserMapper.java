@@ -1,6 +1,7 @@
 package com.naver.dao;
 
 import com.naver.domain.request.ChangeUserCommentRequest;
+import com.naver.domain.request.FreeComment;
 import com.naver.domain.request.UserPageRequest;
 
 import com.naver.domain.entitiy.User;

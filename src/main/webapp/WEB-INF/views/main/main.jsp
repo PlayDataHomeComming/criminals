@@ -13,6 +13,7 @@
   <div class="inner">
     <header>
       <h1>경쟁자는 가시오</h1>
+      <a href="/main/all">자유게시판</a>
     </header>
 
   </div>
@@ -25,8 +26,7 @@
     <!-- Boxes -->
     <div class="thumbnails">
 
-      <c:forEach items="${users}" var="user" >
-
+      <c:forEach items="${users}" var="user">
         <div class="box">
           <a href="#" class="image fit"><img  src="${user.imgUrl}" /></a>
           <div class="inner">

@@ -65,4 +65,5 @@ public class UserPageController {
         userService.deleteAttribute(deleteAttributeRequest);
         return mav;
     }
+
 }

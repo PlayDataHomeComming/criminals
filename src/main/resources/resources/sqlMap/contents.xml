@@ -17,6 +17,14 @@
         delete from contents
         where attribute="${attribute}" and user_id=${userId}
     </delete>
+    <select id="getFreeComment" resultType="FreeComment">
+        select id,name,content,createTime
+        from freecomments
+    </select>
+    <insert id="insertFreeComment">
+        insert into freecomments(name,content)
+        values (#{name},#{content})
+    </insert>
 
 
 </mapper>
