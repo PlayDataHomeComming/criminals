@@ -17,6 +17,7 @@ section.notice {
 }
 .back{
     text-align: right;
+    left: -20px;
 }
 #board-search .search-window {
     padding: 15px 0;
@@ -80,6 +81,15 @@ section.notice {
 
 .board-table .th-date {
     width: 200px;
+    text-align: center;
+}
+.board-table .th-title {
+    width: 500px;
+    text-align: center;
+}
+.board-table .th-nickname {
+    width: 300px;
+    text-align: center;
 }
 
 .board-table th, .board-table td {

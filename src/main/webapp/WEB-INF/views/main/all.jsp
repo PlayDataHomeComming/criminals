@@ -51,10 +51,10 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>${comment.id}</td>
-                        <td>${comment.content}</td>
-                        <td>${comment.name}</td>
-                        <td>${comment.createTime}</td>
+                        <td class="th-num">${comment.id}</td>
+                        <td class="th-title">${comment.content}</td>
+                        <td class="th-nickname">${comment.name}</td>
+                        <td class="th-date">${comment.createTime}</td>
                     </tr>
                     </tbody>
                 </table>
