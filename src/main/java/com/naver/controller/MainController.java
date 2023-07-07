@@ -2,6 +2,7 @@ package com.naver.controller;
 
 import com.naver.domain.entitiy.User;
 import com.naver.domain.request.FreeComment;
+import com.naver.domain.request.InsertComment;
 import com.naver.domain.request.MainRequest;
 import com.naver.service.MainService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,7 +54,7 @@ public class MainController {
         return mav;
     }
     @PostMapping("/main/all")
-    public ModelAndView postAll(ModelAndView mav, @ModelAttribute FreeComment comment)
+    public ModelAndView postAll(ModelAndView mav, @ModelAttribute InsertComment comment)
     {
         mainService.insertFreeComments(comment);
 

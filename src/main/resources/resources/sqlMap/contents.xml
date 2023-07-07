@@ -18,12 +18,12 @@
         where attribute="${attribute}" and user_id=${userId}
     </delete>
     <select id="getFreeComment" resultType="FreeComment">
-        select id,name,content,createTime
+        select *
         from freecomments
     </select>
     <insert id="insertFreeComment">
         insert into freecomments(name,content)
-        values (#{name},#{content})
+        values ("${name}","${content}")
     </insert>
 
 

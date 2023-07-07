@@ -5,6 +5,7 @@ import com.naver.dao.ContentsMapper;
 import com.naver.dao.UserMapper;
 import com.naver.domain.entitiy.User;
 import com.naver.domain.request.FreeComment;
+import com.naver.domain.request.InsertComment;
 import com.naver.domain.request.MainRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -29,11 +30,9 @@ public class MainService {
     {
         return contentsMapper.getFreeComment();
     }
-    public Integer insertFreeComments(FreeComment comment)
+    public Integer insertFreeComments(InsertComment comment)
     {
 
-        return contentsMapper.insertFreeComments(comment);
+        return contentsMapper.insertFreeComment(comment);
     }
-
-
 }
