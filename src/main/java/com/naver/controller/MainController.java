@@ -48,6 +48,7 @@ public class MainController {
         mainService.addUser(user);
         mav.setViewName("redirect:/main");
         //
+        //
         return mav;
     }
 }
