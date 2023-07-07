@@ -61,12 +61,16 @@ table td {
     background-color: #0b8163;
     height: 63px;
     text-align: right;
+<
     vertical-align: middle;
+
 
 
 }
 .input_container{
+
     text-align: right;
+
 }
 .profile{
     font-size: 40px;
@@ -104,6 +108,8 @@ table td {
 .contents_box{
     color: #1b1b1f;
 }
+
 .key_size{
     width: 8%;
 }
+

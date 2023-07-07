@@ -13,6 +13,10 @@
         values(${userId},"${attribute}","${value}")
     </insert>
 
+    <delete id="deleteAttribute">
+        delete from contents
+        where attribute="${attribute}" and user_id=${userId}
+    </delete>
 
 
 

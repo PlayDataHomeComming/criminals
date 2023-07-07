@@ -1,7 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-
-
 <html>
 <head>
     <title>Document</title>
@@ -29,6 +27,7 @@
         <tr>
             <td class="key">${content.attribute}</td>
             <td>${content.value}</td>
+
         </tr>
 
 
@@ -44,16 +43,20 @@
 </div>
 <div>
     <form class="form_box" action="/user/deleteAttribute" method="post">
+
         <p class="comment_text">속성 이름을 입력하여 제거</p>
         <input class="contents_box" type="hidden" name="userId" value="${userId}">
         <input class="contents_box" type="text" name="attribute" placeholder="특징">
         <input type="submit" 추가>
+
     </form>
 </div>
 <table class="table_container">
     <tr>
+
         <td class="key key_bold key_size">번호</td>
         <td class="key key_bold key_size">닉네임</td>
+
         <td class="key_bold">내용</td>
     </tr>
     <h1 class="profile">Comment</h1>
@@ -64,8 +67,6 @@
             <td>${comment.nickName}</td>
             <td>${comment.content}</td>
         </tr>
-
-
     </c:forEach>
 </table>
 <div class="div_box">
@@ -83,7 +84,9 @@
         <input class="contents_box" type="text" name="commentId" placeholder="댓글번호">
         <input class="contents_box" type="text" name="passWord" placeholder="패스워드">
         <input class="contents_box" type="text" name="comment" placeholder="내용">
+
         <input type="submit" placeholder="댓글수정">
+
     </form>
 </div>
 </body>
