@@ -58,8 +58,8 @@
 <!-- Footer -->
 <footer id="footer">
   <div class="inner">
-    <h2>footer</h2>
-    <p>Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui mi, ac imperdiet dolor tincidunt nec. Ut erat lectus, dictum sit amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit, consectetur risus viverra, iaculis orci. Phasellus eu nibh ut mi luctus auctor. Donec sit amet dolor in diam feugiat venenatis. </p>
+    <h2>이 footer는</h2>
+    <p>이 footer는 영국에서 최초로 시작되어 일년에 한바퀴 돌면서 보는 사람에게 행운을 주었고 지금은 당신에게로 옮겨진 이 footer는 프로젝트안에 한번은 써야 합니다. 이 홈페이지 footer를 포함해서 6조는을 행운이 필요한 사람에게 보여 주셔야 합니다. 복사를 해도 좋습니다. 혹 미신이라 하실지 모르지만 사실입니다.  </p>
   </div>
 </footer>
 
