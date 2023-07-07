@@ -47,6 +47,7 @@ public class MainController {
         user.setNumOfVisit(0); //user의 처음 조회수 값은 0임
         mainService.addUser(user);
         mav.setViewName("redirect:/main");
+        //
         return mav;
     }
 }
