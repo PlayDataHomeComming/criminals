@@ -20,6 +20,9 @@
         <div class="container">
             <h3>자유게시판</h3>
         </div>
+        <div class="back">
+            <a href="/main">돌아가기</a>
+        </div>
     </div>
 
     <!-- board seach area -->
@@ -34,7 +37,7 @@
             </div>
         </div>
     </div>
-    <c:forEach items="${freecomments}" var="content">
+    <c:forEach items="${freecomments}" var="comment">
         <div id="board-list">
             <div class="container">
                 <table class="board-table">
@@ -48,10 +51,10 @@
                     </thead>
                     <tbody>
                     <tr>
-                        <td>${content.id}</td>
-                        <th><p>${content.content}</p></th>
-                        <td>${content.name}</td>
-                        <td>${content.createTime}</td>
+                        <td>${comment.id}</td>
+                        <td>${comment.content}</td>
+                        <td>${comment.name}</td>
+                        <td>${comment.createTime}</td>
                     </tr>
                     </tbody>
                 </table>

@@ -58,7 +58,7 @@ public class MainController {
     {
         mainService.insertFreeComments(comment);
 
-        mav.setViewName("redirect:/main");
+        mav.setViewName("redirect:/main/all");
         return mav;
     }
 

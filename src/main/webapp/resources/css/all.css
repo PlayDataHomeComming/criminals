@@ -15,10 +15,13 @@ section.notice {
     font-weight: 400;
     text-align: center;
 }
-
+.back{
+    text-align: right;
+}
 #board-search .search-window {
     padding: 15px 0;
     background-color: #f9f7f9;
+    text-align: right;
 }
 #board-search .search-window .search-wrap {
     position: relative;
